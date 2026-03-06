@@ -112,6 +112,12 @@
             align-items: center;
         }
 
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-flex;
+        }
+
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -410,6 +416,15 @@
             color: var(--color-gray-400);
         }
 
+        footer a,
+        footer a:visited {
+            color: var(--color-gray-300);
+        }
+
+        footer a:hover {
+            color: var(--color-primary);
+        }
+
         /* ============================================
            RESPONSIVE
            ============================================ */
@@ -491,10 +506,12 @@
          ============================================ -->
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="logo.png" alt="Scholia" class="logo-icon" />
-                <span>Scholia</span>
-            </div>
+            <a href="/" class="logo-link" aria-label="Go to Scholia homepage">
+                <div class="logo">
+                    <img src="logo.png" alt="Scholia" class="logo-icon" />
+                    <span>Scholia</span>
+                </div>
+            </a>
             <nav class="header-nav">
                 <a href="#features">Features</a>
                 <a href="#tools">Tools</a>
@@ -516,7 +533,7 @@
                 Table of contents, symbolic labeling, references, and more—all designed for long-form academic writing.
             </p>
             <div class="cta-group">
-                <a href="#install" class="btn btn-primary">Install Extension</a>
+                <a href="#" class="btn btn-primary install-link">Install Extension</a>
                 <a href="#features" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
@@ -637,7 +654,7 @@
                 Scholia is available now as a Chrome extension. Install it today and start using academic-grade
                 writing tools in your Substack editor.
             </p>
-            <a href="#" class="cta-button">Install from Chrome Web Store</a>
+            <a href="#" class="cta-button install-link">Install from Chrome Web Store</a>
         </div>
     </section>
 
@@ -659,5 +676,12 @@
         </div>
     </footer>
 
+    <script>
+        const INSTALL_EXTENSION_URL = '#';
+
+        document.querySelectorAll('.install-link').forEach((link) => {
+            link.setAttribute('href', INSTALL_EXTENSION_URL);
+        });
+    </script>
 </body>
 </html>
