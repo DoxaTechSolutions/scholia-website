@@ -18,7 +18,7 @@
             const hasAccessToken = params.has('access_token');
             const authType = params.get('type');
             
-            if (!hasAccessToken || !authType) return;
+            if (!hasAccessToken) return;
             
             // Route to appropriate page based on auth type
             const routes = {
@@ -28,6 +28,12 @@
                 'invite': '/accept-invite',
                 'magiclink': '/magic-link'
             };
+            
+            // If no type parameter, assume OAuth flow
+            if (!authType) {
+                window.location.href = '/oauth-callback' + hash;
+                return;
+            }
             
             const targetPath = routes[authType];
             if (targetPath) {
