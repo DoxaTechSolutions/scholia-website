@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Scholia - Professional writing tools for Substack. Bring academic-grade editing capabilities to your Substack essays.">
     <title>Scholia - Professional Writing Tools for Substack</title>
+    
+    <!-- Auth Redirect Script - Routes Supabase auth callbacks to appropriate pages -->
+    <script>
+        (function() {
+            // Check if URL contains auth tokens in hash
+            const hash = window.location.hash;
+            if (!hash || hash.length < 10) return;
+            
+            // Parse hash parameters
+            const params = new URLSearchParams(hash.substring(1));
+            const hasAccessToken = params.has('access_token');
+            const authType = params.get('type');
+            
+            if (!hasAccessToken || !authType) return;
+            
+            // Route to appropriate page based on auth type
+            const routes = {
+                'signup': '/confirm-email',
+                'email_confirmation': '/confirm-email',
+                'recovery': '/reset-password',
+                'invite': '/accept-invite',
+                'magiclink': '/magic-link'
+            };
+            
+            const targetPath = routes[authType];
+            if (targetPath) {
+                // Redirect to appropriate page with hash intact
+                window.location.href = targetPath + hash;
+            }
+        })();
+    </script>
+    
     <style>
         /* ============================================
            RESET & BASE STYLES
