@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirm your Scholia email address to complete registration.">
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'none'; 
+                   script-src 'self' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2; 
+                   style-src 'self' 'unsafe-inline'; 
+                   img-src 'self' data:; 
+                   connect-src https://*.supabase.co; 
+                   frame-ancestors 'none'; 
+                   base-uri 'self'; 
+                   form-action 'self';">
+    <title>Confirm Your Email - Scholia</title>
+    <style>
+        /* ============================================
+           RESET & BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            color: #111827;
+            background: linear-gradient(135deg, #FFF1E6 0%, #FFFFFF 100%);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        /* ============================================
+           COLOR VARIABLES (from extension design tokens)
+           ============================================ */
+        :root {
+            --color-primary: #FF6B00;
+            --color-primary-light: #FFF1E6;
+            --color-primary-dark: #E66000;
+            --color-success: #2D9C4A;
+            --color-success-dark: #1B7D2C;
+            --color-error: #DC2626;
+            --color-error-light: #FEE2E2;
+            --color-warning: #F59E0B;
+            --color-gray-900: #111827;
+            --color-gray-800: #1F2937;
+            --color-gray-700: #374151;
+            --color-gray-600: #4B5563;
+            --color-gray-500: #6B7280;
+            --color-gray-300: #D1D5DB;
+            --color-gray-200: #E5E7EB;
+            --color-gray-100: #F3F4F6;
+            --color-gray-50: #F9FAFB;
+            --color-white: #FFFFFF;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--color-gray-900);
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--color-gray-700);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--color-primary-dark);
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           CONTAINER & CARD
+           ============================================ */
+        .container {
+            max-width: 540px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--color-white);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        /* ============================================
+           LOGO
+           ============================================ */
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1.5rem;
+            background: var(--color-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        /* ============================================
+           STATUS ICONS
+           ============================================ */
+        .status-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .status-icon.loading {
+            background: var(--color-gray-100);
+            color: var(--color-gray-500);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .status-icon.success {
+            background: rgba(45, 156, 74, 0.1);
+            color: var(--color-success);
+        }
+
+        .status-icon.error {
+            background: var(--color-error-light);
+            color: var(--color-error);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .button {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin: 0.5rem;
+        }
+
+        .button-primary {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .button-primary:hover {
+            background: var(--color-primary-dark);
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(255, 107, 0, 0.3);
+        }
+
+        .button-secondary {
+            background: var(--color-gray-100);
+            color: var(--color-gray-700);
+        }
+
+        .button-secondary:hover {
+            background: var(--color-gray-200);
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ============================================
+           ALERT BOXES
+           ============================================ */
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: left;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .alert-info {
+            background: rgba(255, 107, 0, 0.1);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            color: var(--color-gray-800);
+        }
+
+        .alert-error {
+            background: var(--color-error-light);
+            border: 1px solid var(--color-error);
+            color: var(--color-gray-900);
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-muted {
+            color: var(--color-gray-500);
+            font-size: 0.875rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--color-gray-200);
+            margin: 2rem 0;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .card {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Logo -->
+            <div class="logo">S</div>
+
+            <!-- Loading State -->
+            <div id="loadingState">
+                <div class="status-icon loading">
+                    <div class="spinner">⟳</div>
+                </div>
+                <h1>Confirming Your Email...</h1>
+                <p>Please wait while we verify your email address.</p>
+            </div>
+
+            <!-- Success State -->
+            <div id="successState" class="hidden">
+                <div class="status-icon success">✓</div>
+                <h1>Email Confirmed!</h1>
+                <p>Your email has been successfully verified. You're all set to start using Scholia.</p>
+                
+                <div class="alert alert-info">
+                    <strong>Next Step: Install the Extension</strong>
+                    Install the Scholia Chrome extension to start enhancing your Substack writing with professional editing tools.
+                </div>
+
+                <div class="button-group">
+                    <a href="https://chrome.google.com/webstore/detail/scholia/EXTENSION_ID" 
+                       class="button button-primary" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Install Chrome Extension
+                    </a>
+                    <a href="https://getscholia.com" class="button button-secondary">
+                        Learn More
+                    </a>
+                </div>
+
+                <div class="divider"></div>
+                <p class="text-muted">
+                    Already have the extension installed? Close this tab and return to the extension to complete setup.
+                </p>
+            </div>
+
+            <!-- Error State -->
+            <div id="errorState" class="hidden">
+                <div class="status-icon error">✕</div>
+                <h1>Verification Failed</h1>
+                <p id="errorMessage">We couldn't verify your email address.</p>
+
+                <div class="alert alert-error" id="errorDetails"></div>
+
+                <div class="button-group">
+                    <a href="https://getscholia.com/#signup" class="button button-primary">
+                        Try Again
+                    </a>
+                    <a href="https://getscholia.com/support" class="button button-secondary">
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JavaScript Client -->
+    <script type="module">
+        // Import Supabase client
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+        // Configuration
+        const SUPABASE_URL = 'https://wrjtrtxkjmgriwfqhzlz.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndyanRydHhram1ncml3ZnFoemx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4OTk5MDIsImV4cCI6MjA4ODQ3NTkwMn0.N389J2pK577KsPeU9IF6AFQZBUSG5EDlqFv4v7TkOi8';
+
+        // Initialize Supabase client
+        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // DOM Elements
+        const loadingState = document.getElementById('loadingState');
+        const successState = document.getElementById('successState');
+        const errorState = document.getElementById('errorState');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorDetails = document.getElementById('errorDetails');
+
+        // Rate limiting state
+        let attemptCount = 0;
+        const MAX_ATTEMPTS = 5;
+
+        /**
+         * Show specific state
+         */
+        function showState(state) {
+            loadingState.classList.add('hidden');
+            successState.classList.add('hidden');
+            errorState.classList.add('hidden');
+
+            if (state === 'loading') loadingState.classList.remove('hidden');
+            if (state === 'success') successState.classList.remove('hidden');
+            if (state === 'error') errorState.classList.remove('hidden');
+        }
+
+        /**
+         * Show error with details
+         */
+        function showError(title, details) {
+            errorMessage.textContent = title;
+            errorDetails.innerHTML = `<strong>Error Details:</strong> ${details}`;
+            showState('error');
+        }
+
+        /**
+         * Parse URL parameters
+         */
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const hash = new URLSearchParams(window.location.hash.substring(1));
+            
+            return {
+                token: params.get('token') || hash.get('token'),
+                type: params.get('type') || hash.get('type') || 'signup',
+                redirectTo: params.get('redirect_to') || hash.get('redirect_to')
+            };
+        }
+
+        /**
+         * Notify extension of successful confirmation (if open)
+         */
+        function notifyExtension() {
+            try {
+                // Try to notify extension via postMessage if opened from extension
+                if (window.opener && !window.opener.closed) {
+                    window.opener.postMessage(
+                        { 
+                            type: 'EMAIL_CONFIRMED', 
+                            verified: true,
+                            timestamp: new Date().toISOString()
+                        }, 
+                        '*'
+                    );
+                    console.log('[ConfirmEmail] Notified extension of successful confirmation');
+                }
+            } catch (error) {
+                // Silent fail - extension might not be open
+                console.warn('[ConfirmEmail] Could not notify extension:', error.message);
+            }
+        }
+
+        /**
+         * Main verification function
+         */
+        async function verifyEmail() {
+            // Check rate limiting
+            attemptCount++;
+            if (attemptCount > MAX_ATTEMPTS) {
+                showError(
+                    'Too Many Attempts',
+                    'This confirmation link has been used too many times. Please request a new confirmation email.'
+                );
+                return;
+            }
+
+            const { token, type } = getUrlParams();
+
+            // Validate token presence
+            if (!token) {
+                showError(
+                    'Invalid Confirmation Link',
+                    'No verification token found in the URL. Please check that you copied the complete link from your email.'
+                );
+                return;
+            }
+
+            try {
+                console.log('[ConfirmEmail] Starting email verification...');
+                showState('loading');
+
+                // Verify the email token with Supabase
+                const { data, error } = await supabase.auth.verifyOtp({
+                    token_hash: token,
+                    type: type
+                });
+
+                if (error) {
+                    throw error;
+                }
+
+                if (!data?.user) {
+                    throw new Error('No user data returned after verification');
+                }
+
+                console.log('[ConfirmEmail] Email verified successfully:', data.user.email);
+
+                // Show success state
+                showState('success');
+
+                // Notify extension if open
+                notifyExtension();
+
+            } catch (error) {
+                console.error('[ConfirmEmail] Verification failed:', error);
+
+                // Handle specific error cases
+                if (error.message?.includes('expired')) {
+                    showError(
+                        'Link Expired',
+                        'This confirmation link has expired. Confirmation links are valid for 24 hours. Please request a new confirmation email.'
+                    );
+                } else if (error.message?.includes('invalid') || error.message?.includes('Token')) {
+                    showError(
+                        'Invalid Link',
+                        'This confirmation link is invalid or has already been used. If you\'ve already confirmed your email, you can proceed to install the extension.'
+                    );
+                } else if (error.message?.includes('network') || error.message?.includes('fetch')) {
+                    showError(
+                        'Connection Error',
+                        'Unable to connect to the verification service. Please check your internet connection and try again.'
+                    );
+                } else {
+                    showError(
+                        'Verification Failed',
+                        error.message || 'An unexpected error occurred during email verification. Please try again or contact support.'
+                    );
+                }
+            }
+        }
+
+        // Run verification on page load
+        verifyEmail();
+
+        // Listen for postMessage from extension (for verification status checks)
+        window.addEventListener('message', (event) => {
+            // Security: In production, verify origin
+            // if (event.origin !== 'chrome-extension://YOUR_EXTENSION_ID') return;
+            
+            if (event.data?.type === 'CHECK_VERIFICATION_STATUS') {
+                // Extension is checking if this page verified successfully
+                const isSuccess = !successState.classList.contains('hidden');
+                event.source.postMessage({
+                    type: 'VERIFICATION_STATUS_RESPONSE',
+                    verified: isSuccess
+                }, event.origin);
+            }
+        });
+    </script>
+</body>
+</html>
