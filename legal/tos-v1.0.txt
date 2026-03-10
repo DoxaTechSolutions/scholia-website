@@ -1,0 +1,115 @@
+TERMS OF SERVICE
+Version 1.0
+Effective Date: March 1, 2026
+
+SCHOLIA - TERMS OF SERVICE
+
+1. ACCEPTANCE OF TERMS
+
+By accessing or using the Scholia browser extension ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to all of these Terms, do not use the Service.
+
+2. DESCRIPTION OF SERVICE
+
+Scholia is a browser extension that provides writing assistance tools for Substack and compatible platforms. The Service includes:
+- Symbolic labeling and annotation tools
+- Citation and reference management
+- Claim-evidence linking
+- Argument mapping and outline generation
+- Publishing workflow tools
+
+3. USER ACCOUNTS
+
+3.1 Registration
+You must create an account to use certain features of the Service. You agree to:
+- Provide accurate, current, and complete information
+- Maintain the security of your account credentials
+- Notify us immediately of any unauthorized access
+
+3.2 Username Requirements
+Usernames must be 3-20 characters, contain only letters, numbers, underscores, and periods, and must not impersonate others or use offensive language.
+
+3.3 Account Termination
+We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent, abusive, or illegal activity.
+
+4. USER CONTENT
+
+4.1 Ownership
+You retain all rights to content you create using the Service. We do not claim ownership of your writings, annotations, or research.
+
+4.2 Limited License
+You grant Scholia a limited license to store, process, and display your content solely for the purpose of providing the Service to you.
+
+4.3 Content Restrictions
+You may not use the Service to create, store, or share content that:
+- Violates any law or regulation
+- Infringes intellectual property rights
+- Contains malware or malicious code
+- Harasses, threatens, or defames others
+- Contains hate speech or promotes violence
+
+5. SUBSCRIPTION AND PAYMENTS
+
+5.1 Free and Paid Tiers
+Scholia offers both free and paid subscription tiers. Paid features require an active subscription.
+
+5.2 Billing
+Subscriptions are billed according to the plan you select. All fees are non-refundable except as required by law.
+
+5.3 Cancellation
+You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period.
+
+6. PRIVACY AND DATA PROTECTION
+
+Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your privacy and handling your data responsibly.
+
+7. INTELLECTUAL PROPERTY
+
+7.1 Service Ownership
+Scholia and all related trademarks, logos, and service marks are owned by Scholia or its licensors. You may not use these without written permission.
+
+7.2 Feedback
+If you provide feedback or suggestions about the Service, we may use that feedback without obligation to you.
+
+8. DISCLAIMERS
+
+8.1 AS-IS Service
+THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+8.2 No Guarantee of Availability
+We do not guarantee the Service will be uninterrupted, error-free, or secure. We may modify or discontinue features at any time.
+
+9. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, SCHOLIA SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF DATA, REVENUE, OR PROFITS.
+
+IN NO EVENT SHALL OUR TOTAL LIABILITY EXCEED THE AMOUNT YOU PAID US IN THE TWELVE MONTHS PRECEDING THE CLAIM.
+
+10. INDEMNIFICATION
+
+You agree to indemnify and hold harmless Scholia from any claims, damages, or expenses arising from your use of the Service or violation of these Terms.
+
+11. CHANGES TO TERMS
+
+We may update these Terms from time to time. If we make material changes, we will notify you through the Service and require acceptance before you can continue using the Service.
+
+Continued use after changes constitutes acceptance of the new Terms.
+
+12. GOVERNING LAW
+
+These Terms are governed by the laws of the United States and the State of California, without regard to conflict of law principles.
+
+13. DISPUTE RESOLUTION
+
+Any disputes arising from these Terms or the Service shall be resolved through binding arbitration in accordance with the American Arbitration Association's rules.
+
+14. SEVERABILITY
+
+If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
+
+15. CONTACT
+
+For questions about these Terms, contact us at:
+Email: legal@scholia.com
+Website: https://getscholia.com/support
+
+Last Updated: March 1, 2026

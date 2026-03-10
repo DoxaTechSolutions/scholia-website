@@ -1,0 +1,186 @@
+PRIVACY POLICY
+Version 1.0
+Effective Date: March 1, 2026
+
+SCHOLIA - PRIVACY POLICY
+
+1. INTRODUCTION
+
+Scholia ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Scholia browser extension.
+
+By using Scholia, you consent to the data practices described in this policy.
+
+2. INFORMATION WE COLLECT
+
+2.1 Account Information
+When you create an account, we collect:
+- Email address (required for authentication)
+- Username (required, publicly visible)
+- Password (encrypted and never stored in plain text)
+- Authentication provider (Email, Google, GitHub, etc.)
+
+2.2 Demographic Information (Optional)
+During onboarding, we may collect:
+- Creator role (e.g., writer, journalist, podcaster)
+- Content interests (e.g., technology, politics, culture)
+- Age range, gender, country, state (all optional, "Prefer not to say" available)
+- Feature discovery information (how you heard about us)
+
+2.3 Usage Data
+We automatically collect:
+- Extension version and browser type
+- Feature usage patterns (which tools you use, how often)
+- Error logs and diagnostic information
+- Session duration and interaction timestamps
+
+2.4 User Content
+We store content you create using Scholia:
+- Annotations, labels, and highlights
+- Citations and references
+- Drafts and outlines
+- Publishing workflow data
+
+2.5 Payment Information
+If you subscribe to a paid plan:
+- Billing information is processed by Stripe (our payment processor)
+- We store only subscription status, tier, and transaction IDs
+- We NEVER store full credit card numbers
+
+3. HOW WE USE YOUR INFORMATION
+
+We use collected information to:
+- Provide, maintain, and improve the Service
+- Authenticate your account and prevent fraud
+- Process subscription payments
+- Personalize your experience
+- Send service announcements and updates
+- Analyze usage patterns to improve features
+- Respond to support requests
+- Comply with legal obligations
+
+4. DATA SHARING AND DISCLOSURE
+
+4.1 Third-Party Service Providers
+We share data with trusted service providers who help us operate the Service:
+- Supabase (hosting, authentication, database)
+- Stripe (payment processing)
+- Email service providers (transactional emails)
+
+These providers are contractually required to protect your data and use it only for specified purposes.
+
+4.2 Legal Requirements
+We may disclose information if required by law or in response to:
+- Valid legal process (subpoena, court order)
+- Government requests
+- Protection of our rights, property, or safety
+- Prevention of fraud or illegal activity
+
+4.3 Business Transfers
+If Scholia is acquired or merged, your data may be transferred to the new owner.
+
+4.4 Aggregated Data
+We may share anonymized, aggregated statistics that do not identify individual users (e.g., "60% of users are writers").
+
+5. DATA RETENTION
+
+- Account data: Retained until you delete your account
+- User content: Retained until you delete it or close your account
+- Usage logs: Retained for 30 days, then deleted
+- Demographic data: Anonymized upon account deletion
+
+6. DATA SECURITY
+
+We implement industry-standard security measures:
+- HTTPS/TLS encryption for all data in transit
+- Encrypted storage for passwords (bcrypt/Argon2)
+- Row-Level Security (RLS) policies on database
+- Regular security audits and penetration testing
+- Access controls and least-privilege principles
+
+However, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.
+
+7. YOUR RIGHTS (GDPR/CCPA Compliance)
+
+You have the right to:
+- Access: Request a copy of your personal data
+- Rectification: Correct inaccurate or incomplete data
+- Erasure: Delete your account and associated data
+- Portability: Export your data in a machine-readable format
+- Restriction: Limit how we process your data
+- Objection: Opt out of certain data processing activities
+
+To exercise these rights, contact us at privacy@scholia.com.
+
+8. ACCOUNT DELETION
+
+You may delete your account at any time from Settings > Account > Delete Account.
+
+Upon deletion, we will:
+- Permanently delete your account, profile, and user content
+- Anonymize demographic data (remove linkage to your identity)
+- Revoke all API keys and sessions
+- Cancel active subscriptions
+
+Analytics events may be retained in anonymized form for trend analysis.
+
+9. COOKIES AND TRACKING
+
+9.1 Essential Cookies
+We use session cookies for authentication and security. These are required for the Service to function.
+
+9.2 Analytics
+We may use privacy-respecting analytics tools to understand usage patterns. You can opt out in Settings.
+
+9.3 Third-Party Tracking
+We do NOT use third-party advertising trackers or sell your data to advertisers.
+
+10. CHILDREN'S PRIVACY
+
+Scholia is not intended for users under 13 years of age. We do not knowingly collect information from children. If we discover we have collected data from a child, we will delete it immediately.
+
+11. INTERNATIONAL DATA TRANSFERS
+
+If you access Scholia from outside the United States, your data may be transferred to and processed in the United States, where our servers are located.
+
+We comply with applicable data protection laws for international transfers.
+
+12. CALIFORNIA PRIVACY RIGHTS (CCPA)
+
+California residents have additional rights under the California Consumer Privacy Act (CCPA):
+- Right to know what personal information is collected
+- Right to delete personal information
+- Right to opt out of the sale of personal information (we do NOT sell data)
+- Right to non-discrimination for exercising privacy rights
+
+To exercise these rights, contact privacy@scholia.com.
+
+13. EUROPEAN PRIVACY RIGHTS (GDPR)
+
+If you are in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR):
+- Lawful basis: We process data based on consent, contract performance, and legitimate interests
+- Data Protection Officer: Contact dpo@scholia.com
+- Supervisory Authority: You may lodge a complaint with your local data protection authority
+
+14. CHANGES TO THIS PRIVACY POLICY
+
+We may update this Privacy Policy from time to time. If we make material changes, we will:
+- Notify you through the Service
+- Require acceptance before you can continue using Scholia
+- Post the updated policy with a new effective date
+
+Continued use after changes constitutes acceptance of the new Privacy Policy.
+
+15. DO NOT TRACK SIGNALS
+
+Some browsers offer "Do Not Track" (DNT) signals. We respect DNT signals and do not track users who enable them.
+
+16. CONTACT US
+
+If you have questions about this Privacy Policy or our data practices, contact us at:
+
+Email: privacy@scholia.com
+Data Protection Officer: dpo@scholia.com
+Website: https://getscholia.com/privacy
+Mail: Scholia Privacy Team, [Address]
+
+Last Updated: March 1, 2026
